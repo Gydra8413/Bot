@@ -5,7 +5,7 @@ from telebot import types
 
 #sys.setdefaultencoding('utf-8')
 
-
+token = '1170474994:AAHDwIL2EKfy23DVFSoGEOGfUPyIQ9Vfhg8'
 
 
 
