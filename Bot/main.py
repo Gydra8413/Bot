@@ -64,7 +64,7 @@ item4=('Гашиш 0.5гр-700p')
 item5=('Бошки 1гр-1790p')
 item6= ('Амфетамин 1гр-1199p') 
 item7=('Мефедрон 1гр-1790p')
-markup4.add(item4,item5,item6,item7)
+markup2.add(item4,item5,item6,item7)
 
 
 markup3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
@@ -73,7 +73,7 @@ item9=('Бошки 0.5гр-1099p')
 item10=('Метамфетамин 1гр-2199p') 
 item11=('Героин 1гр-1899p')
 item12=('Экстази 1гр-1299p')
-markup4.add(item8,item9,item10,item11,item12)
+markup3.add(item8,item9,item10,item11,item12)
 
 markup4 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 item13=('Гашиш 1гр-1300p')
