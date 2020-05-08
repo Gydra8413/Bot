@@ -13,7 +13,7 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
-	bot.send_message(message.chat.id,'Ростовский наркошоп. В наличии качественный товар и шаговая доступность', reply_markup=markup1)
+	bot.send_message(message.chat.id,'Ростовский магазин. В наличии качественный товар и шаговая доступность', reply_markup=markup1)
 
 
 markup1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
