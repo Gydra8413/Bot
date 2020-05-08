@@ -11,7 +11,7 @@ token = '1170474994:AAHDwIL2EKfy23DVFSoGEOGfUPyIQ9Vfhg8'
 
 bot = telebot.TeleBot(token)
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['/start'])
 def start_message(message):
 	bot.send_message(message.chat.id,'Ростовский наркошоп. В наличии качественный товар и шаговая доступность', reply_markup=markup1)
 
