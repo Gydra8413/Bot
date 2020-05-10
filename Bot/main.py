@@ -83,6 +83,10 @@ item16=('Экстази 0.5гр-800p')
 item17=('Мефедрон 1гр-1790p')
 markup4.add(item13,item14,item15,item16,item17)
 
+markup5 = telebot.types.InlineKeyboardMarkup(resize_keyboard=True, row_width=1)
+item18=('Мефедрон 1гр-1790p')
+markup5.add(item18)
+
 # markup3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 # item45=('Садовое')
 # item46=('Площадь Восстания')
@@ -229,8 +233,6 @@ def send_message(message):
 	else:
 		pass
 
-markup5 = telebot.types.InlineKeyboardMarkup(resize_keyboard=True, row_width=1)
-item18=('Мефедрон 1гр-1790p')
-markup5.add(item18)
+
 
 bot.polling()
