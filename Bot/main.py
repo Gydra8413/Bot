@@ -111,8 +111,8 @@ def send_message(message):
 	elif message.text == 'Ленинская улица':
 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup5)
 		
-# 	elif message.text == 'Мытищи':
-# 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup4)
+ 	elif message.text == 'Выберите улицу':
+ 		bot.send_message(message.chat.id, reply_markup=markup2)
 # 	elif message.text == 'Королев':
 # 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup4)
 # 	elif message.text == 'Балашиха':
