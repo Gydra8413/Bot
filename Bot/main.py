@@ -5,7 +5,7 @@ from telebot import types
 
 #sys.setdefaultencoding('utf-8')
 
-token = '1170474994:AAHDwIL2EKfy23DVFSoGEOGfUPyIQ9Vfhg8'
+token = '1185810520:AAHYX-zd0e5giHF4aa67JzjD-NTcrygmWDc'
 
 
 
@@ -16,14 +16,15 @@ def start_message(message):
 	bot.send_message(message.chat.id,'Ростовский магазин. В наличии качественный товар и шаговая доступность', reply_markup=markup1)
 
 
-markup1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-item1=('Комсомольская улица')
-item2=('Невская улица')
-item3=('Ленинская улица')
-markup1.add(item1, item2, item3)
+markup2 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+item2=('Комсомольская улица')
+item3=('Невская улица')
+item4=('Ленинская улица')
+markup2.add(item2, item3, item4)
 
-# markup2 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
-# item4=('Медведково')
+markup1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+item1=('Выберите улицу')
+markup1.add(item1)
 # item5=('Отрадное')
 # item6= ('Речной вокзал') 
 # item7=('Сходненская') 
@@ -59,33 +60,31 @@ markup1.add(item1, item2, item3)
 # markup2.add(item4,item5,item6,item7,item8,item9,item10,item11,item12,item13,item14,item15,item16,item17,item18,item19,item20,item21,item22,item23,item24,item25,item26,item27,item28,item29,item30,item31,item32,item33,item34,item35)
 
 
-markup2 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-item4=('Гашиш 0.5гр-700p')
-item5=('Бошки 1гр-1790p')
-item6= ('Амфетамин 1гр-1199p') 
-item7=('Мефедрон 1гр-1790p')
-markup2.add(item4,item5,item6,item7)
-
-
 markup3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-item8=('Гашиш 1гр-1300p')
-item9=('Бошки 0.5гр-1099p')
-item10=('Метамфетамин 1гр-2199p') 
-item11=('Героин 1гр-1899p')
-item12=('Экстази 1гр-1299p')
-markup3.add(item8,item9,item10,item11,item12)
+item5=('Гашиш 0.5гр-700p')
+item6=('Бошки 1гр-1790p')
+item7= ('Амфетамин 1гр-1199p') 
+item8=('Мефедрон 1гр-1790p')
+markup3.add(item5,item6,item7,item8)
+
 
 markup4 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-item13=('Гашиш 1гр-1300p')
-item14= ('Амфетамин 1гр-1199p') 
-item15=('Метамфетамин 1гр-2199p') 
-item16=('Экстази 0.5гр-800p')
-item17=('Мефедрон 1гр-1790p')
-markup4.add(item13,item14,item15,item16,item17)
+item9=('Гашиш 1гр-1300p')
+item10=('Бошки 0.5гр-1099p')
+item11=('Метамфетамин 1гр-2199p') 
+item12=('Героин 1гр-1899p')
+item13=('Экстази 1гр-1299p')
+markup4.add(item9,item10,item11,item12,item13)
 
-markup5 = telebot.types.InlineKeyboardMarkup(resize_keyboard=True, row_width=1)
+markup5 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+item14=('Гашиш 1гр-1300p')
+item15= ('Амфетамин 1гр-1199p') 
+item16=('Метамфетамин 1гр-2199p') 
+item17=('Экстази 0.5гр-800p')
 item18=('Мефедрон 1гр-1790p')
-markup5.add(item18)
+markup5.add(item14,item15,item16,item17,item18)
+
+
 
 # markup3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 # item45=('Садовое')
@@ -106,11 +105,11 @@ markup5.add(item18)
 @bot.message_handler(content_types=['text'])
 def send_message(message):
 	if message.text == 'Комсомольская улица':
-		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup2)
+		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup3)
 	elif message.text == 'Невская улица':	
- 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup3)
+ 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup4)
 	elif message.text == 'Ленинская улица':
-		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup4)
+		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup5)
 		
 # 	elif message.text == 'Мытищи':
 # 		bot.send_message(message.chat.id,'Выберите товар', reply_markup=markup4)
@@ -236,3 +235,6 @@ def send_message(message):
 
 
 bot.polling()
+
+   
+
