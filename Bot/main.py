@@ -233,6 +233,8 @@ def send_message(message):
 	else:
 		pass
 
-
+markup5 = types.InlineKeyboardMarkup(resize_keyboard=True, row_width=1)
+item18=('start')
+markup.add(item18)
 
 bot.polling()
